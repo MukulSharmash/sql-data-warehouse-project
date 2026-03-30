@@ -61,6 +61,3 @@ scripts/silver/   --> cleaning and transformation scripts
 scripts/gold/     --> final analytical model scripts  
 tests/            --> data quality and validation queries  
 
-- More validation checks
-- Power BI dashboard on top of the Gold layer
-- Performance optimization for larger datasets
