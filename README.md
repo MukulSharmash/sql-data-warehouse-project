@@ -61,3 +61,12 @@ scripts/silver/   --> cleaning and transformation scripts
 scripts/gold/     --> final analytical model scripts  
 tests/            --> data quality and validation queries  
 
+## Architecture
+
+graph LR
+    A[Yelp JSON Data] --> B[Python Chunking Script]
+    B --> C[Amazon S3]
+    C --> D[(Snowflake Bronze)]
+    D --> E[(Snowflake Silver: Cleaning & Sentiment)]
+    E --> F[(Snowflake Gold: Star Schema)]
+    F --> G[Power BI Dashboard]
